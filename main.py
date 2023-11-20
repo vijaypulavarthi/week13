@@ -1,8 +1,4 @@
 import streamlit as st
-
-
-
-import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -33,4 +29,8 @@ plt.tight_layout()
 
 # Display the chart using Streamlit
 st.pyplot(plt)
+
+st.write("Subset of the Data")
+subset = data.head(10)  # Displaying the first 10 rows
+st.dataframe(subset)
 
