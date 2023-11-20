@@ -16,6 +16,8 @@ plt.figure(figsize=(10, 6))
 
 bar_width = 0.35
 index = grouped_data.index
+st.header("WEEK13 ASSIGNMENT")
+st.subheader("what is the  variation in reported cases of commercial sex acts versus involuntary servitude over the years?")
 
 plt.bar(index, grouped_data['Commercial Sex Acts'], bar_width, label='Commercial Sex Acts')
 plt.bar(index + bar_width, grouped_data['Involuntary Servitude'], bar_width, label='Involuntary Servitude')
@@ -30,21 +32,12 @@ plt.tight_layout()
 # Display the chart using Streamlit
 st.pyplot(plt)
 
-st.write("Subset of the Data")
-subset = data.head(10)  # Displaying the first 10 rows
-st.dataframe(subset)
+st.header("WEEK13 ASSIGNMENT")
+st.subheader("20 Rows of the Dataset")
+subset_data = data.head(20)
+st.write(subset_data)
 
 
-import streamlit as st
-import pandas as pd
 
-# Load your dataset from Backblaze or GitHub
-# Replace 'YOUR_DATA_URL' with the actual URL or file path from Backblaze or GitHub
-data = pd.read_csv('https://tree-iad1-0003.secure.backblaze.com/b2_browse_files2.htm?bznetid=15631213181700462626481')
-
-# Display a subset of the data using st.dataframe
-st.write("Subset of the Data")
-subset = data.head(10)  # Displaying the first 10 rows as an example
-st.dataframe(subset)
 
 
