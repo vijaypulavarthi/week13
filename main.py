@@ -34,3 +34,17 @@ st.write("Subset of the Data")
 subset = data.head(10)  # Displaying the first 10 rows
 st.dataframe(subset)
 
+
+import streamlit as st
+import pandas as pd
+
+# Load your dataset from Backblaze or GitHub
+# Replace 'YOUR_DATA_URL' with the actual URL or file path from Backblaze or GitHub
+data = pd.read_csv('https://tree-iad1-0003.secure.backblaze.com/b2_browse_files2.htm?bznetid=15631213181700462626481')
+
+# Display a subset of the data using st.dataframe
+st.write("Subset of the Data")
+subset = data.head(10)  # Displaying the first 10 rows as an example
+st.dataframe(subset)
+
+
