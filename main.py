@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 # Load the dataset (replace 'FBI_dataset.csv' with your actual dataset file)
 data = pd.read_csv('FBI_dataset.csv', usecols=['DATA_YEAR', 'OFFENSE_SUBCAT_NAME'])
+data1 = pd.read_csv('FBI_dataset.csv')
 
 # Filter data for 'Commercial Sex Acts' and 'Involuntary Servitude' offense subcategories
 filtered_data = data[data['OFFENSE_SUBCAT_NAME'].isin(['Commercial Sex Acts', 'Involuntary Servitude'])]
@@ -34,7 +35,7 @@ st.pyplot(plt)
 
 st.header("WEEK13 ASSIGNMENT")
 st.subheader("20 Rows of the Dataset")
-subset_data = data.head(20)
+subset_data = data1.head(20)
 st.write(subset_data)
 
 
